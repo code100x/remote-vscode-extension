@@ -13,7 +13,7 @@ function initWs() {
 
 	ws.onmessage = async (e: any) => {
 		vscode.commands.executeCommand('extension.sendToAiTerminal', 'do something');
-		const path = "/tmp/bolty-worker/hooks";
+		const path = "/tmp/bolty-worker/hooks/useColorScheme.ts";
 		const document = await vscode.workspace.openTextDocument(path);
         const editor = await vscode.window.showTextDocument(document);
 		const edit = new vscode.WorkspaceEdit();
